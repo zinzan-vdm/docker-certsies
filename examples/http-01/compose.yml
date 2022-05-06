@@ -1,0 +1,11 @@
+version: '2'
+services:
+  dehydrated:
+    image: zinzan/certsies:latest
+    volumes:
+    - ./certsies:/certsies
+    environment:
+    - DEHYDRATED_CA="https://acme-staging-v02.api.letsencrypt.org/directory" # Change this to production if you require it.
+    - DEHYDRATED_CHALLENGE="http-01"
+    - DEHYDRATED_EMAIL="my-user@example.com"
+    - DEHYDRATED_ACCEPT_TERMS=yes # Accept the terms for the creation of your account.

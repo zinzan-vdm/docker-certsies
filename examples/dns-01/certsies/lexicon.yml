@@ -1,0 +1,2 @@
+cloudflare:
+  auth_token: my-cool-cloudflare-auth-token
