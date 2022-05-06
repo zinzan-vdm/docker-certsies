@@ -1,4 +1,5 @@
 FROM alpine:latest
+LABEL VERSION=1.0.0
 
 # This image is massively inspired by the https://github.com/matrix-org/docker-dehydrated project.
 
