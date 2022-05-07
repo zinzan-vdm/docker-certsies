@@ -3,8 +3,6 @@
 set -e
 
 source /app/helper-scripts/template.helper.sh
-source /app/helper-scripts/strip-whitespace.helper.sh
-source /app/helper-scripts/split-on.helper.sh
 
 if [[ -z "$DEHYDRATED_EMAIL" ]]; then
   echo 'DEHYDRATED_EMAIL is required to configure and register with ACME.'

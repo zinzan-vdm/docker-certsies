@@ -4,7 +4,7 @@ set -e
 set -u
 set -o pipefail
 
-if [[ "$DEHYDRATED_CHALLENGE" == 'dns-01' ]]; then
+if [[ "$DEHYDRATED_CHALLENGE" != 'dns-01' ]]; then
   echo 'LEXICON Hook not required unless DEHYDRATED_CHALLENGE is set to dns-01'
   exit 0
 fi
