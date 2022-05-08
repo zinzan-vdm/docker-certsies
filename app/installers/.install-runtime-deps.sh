@@ -6,6 +6,7 @@ apk add --no-cache --virtual .runtime-deps \
   openssl \
   curl \
   sed \
+  gawk \
   grep \
   bash \
   libxml2-utils \
