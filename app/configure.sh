@@ -11,8 +11,17 @@ fi
 
 CERTSIES_DIR="${1-/certsies}"
 
+echo "Creating basic/required directories in $CERTSIES_DIR/config."
+
 mkdir -p "$CERTSIES_DIR/wellknown"
 mkdir -p "$CERTSIES_DIR/certs"
 mkdir -p "$CERTSIES_DIR/accounts"
+
+if [[ -d '/conf' ]]; then
+  echo "Located directory /conf on the filesystem. Any files inside this folder will now be copied to the $CERTSIES_DIR."
+  cp -r /conf/* "$CERTSIES_DIR"
+fi
+
+echo "Generating $CERTSIES_DIR/config."
 
 template-file /app/templates/dehydrate-config > "$CERTSIES_DIR/config"
