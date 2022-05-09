@@ -40,8 +40,8 @@ For more information on how this file is structured, please see [this page](http
 | Variable                  | Required       | Default                                                | Description |
 | -- | -- | -- | -- |
 | CONFIGURE                 |   | yes                                                    | Setting this to `yes` will force config to be regenerated for `/certsies`. |
-| DOMAINS_TXT               |   |                                                        | You can provide an additional path to a `domains.txt` file which will be copied to `/certsies/domains.txt`. |
-| LEXICON_YML               |   |                                                        | You can provide an additional path to a `lexicon.yml` file which will be copied to `/certsies/lexicon.yml`. |
+| DOMAINS_TXT_PATH          |   |                                                        | You can provide an additional path to a `domains.txt` file which will be copied to `/certsies/domains.txt`. |
+| LEXICON_YML_PATH          |   |                                                        | You can provide an additional path to a `lexicon.yml` file which will be copied to `/certsies/lexicon.yml`. |
 | DEHYDRATED_CA             |   | https://acme-staging-v02.api.letsencrypt.org/directory | The CA to use. By default we use the LE Staging CA, but for production we obviously want to use the production CA. (`https://acme-v02.api.letsencrypt.org/directory`) |
 | DEHYDRATED_CHALLENGE      |   | http-01                                                | The 2 challence types supported by Dehydrated are `http-01` and `dns-01`. |
 | DEHYDRATED_HOOK           |   | /app/hooks/invoke.sh                                   | The Dehydrated compatible hook to execute. Executing `/app/hooks/invoke.sh` will run all hooks in `/app/hooks/hooks.d` and `/certsies/hooks`. |
